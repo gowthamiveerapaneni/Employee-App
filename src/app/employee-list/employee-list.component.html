@@ -1,10 +1,13 @@
+<body>
 <h2>employee list</h2>
-<table class="table table-stripped">
+<table class="table table-striped">
     <thead>
+        <tr>
         <th>FirstName</th>
         <th>LastName</th>
         <th>EmailId</th>
         <th>Action</th>
+    </tr>
     </thead>
     <tbody>
         <tr *ngFor="let employee of employees">
@@ -13,7 +16,10 @@
             <td>{{employee.emailID}}</td>
             <td>
                 <button (click)="updateEmployee(employee.id)" class="btn btn-info">Upadte</button>
+                <button (click)="deleteEmployee(employee.id)" class="btn btn-danger" style="margin-left:10px">Delete</button>
+                <button (click)="employeeDetails(employee.id)" class="btn btn-info" style="margin-left: 10px">View</button>
             </td>
         </tr>
     </tbody>
 </table>
+</body>
